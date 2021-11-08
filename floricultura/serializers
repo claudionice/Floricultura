@@ -1,5 +1,5 @@
 from rest_framework import serializers 
-from escola.models import Planta, Vaso
+from floricultura.models import Planta, Vaso
 
 class PlantaSerializer (serializers.ModelSerializers):
     class Meta ():

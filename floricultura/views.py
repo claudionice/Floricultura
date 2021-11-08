@@ -1,11 +1,10 @@
-from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import generics, decorators 
-from floricultura.serializers import FloriculturaSerializer
-from floricultura.models import planta, vaso 
+from floricultura.serializers import PlantaSerializer
+from floricultura.models import Planta, Vaso 
 
-@decorators.api_view (['GET'])
-def plantas (request):
+@decorators.api_view (['GET',])
+def planta (request):
     planta = Planta.objects.all ()
     serializers = PlantaSerializer (planta, many=True)
     return Response (serializers.data)
