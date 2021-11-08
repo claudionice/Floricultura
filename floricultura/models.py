@@ -1,6 +1,6 @@
 from django.db import models
 
-class plantas (models.Model):
+class Planta (models.Model):
     especie = models.CharField (max_length = 30)
     nome_cientifico = models.CharField (max_length= 30)
     ESTACAO = (
@@ -15,7 +15,7 @@ class plantas (models.Model):
         return self.especie
 
 
-class vasos (models.Model):
+class Vaso (models.Model):
     TAMANHO = (
         ('P', 'Pequeno'),
         ('M', 'Medio'),

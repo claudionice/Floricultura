@@ -1,12 +1,12 @@
 from rest_framework import serializers 
-from escola.models import plantas, vasos
+from escola.models import Planta, Vaso
 
-class PlantasSerializer (serializers.ModelSerializers):
+class PlantaSerializer (serializers.ModelSerializers):
     class Meta ():
-        model= plantas
+        model= Planta
         fields = '__all__'
 
-class VasosSerializer (serializers.ModelSerializers):
+class VasoSerializer (serializers.ModelSerializers):
     class Meta ():
-        model= vasos 
+        model= Vaso 
         fields = '__all__'
