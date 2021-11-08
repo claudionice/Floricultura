@@ -1,6 +1,6 @@
 from rest_framework.response import Response
 from rest_framework import generics, decorators 
-from floricultura.serializers import PlantaSerializer 
+from serializers import PlantaSerializer 
 from floricultura.models import Planta, Vaso
 
 
