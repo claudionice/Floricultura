@@ -1,7 +1,8 @@
 from rest_framework.response import Response
 from rest_framework import generics, decorators 
-from floricultura.serializers import PlantaSerializer
-from floricultura.models import Planta, Vaso 
+from floricultura.serializers import PlantaSerializer 
+from floricultura.models import Planta, Vaso
+
 
 @decorators.api_view (['GET',])
 def planta (request):
