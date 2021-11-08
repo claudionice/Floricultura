@@ -1,14 +1,15 @@
-from rest_framework.response import Response
-from rest_framework import generics, decorators 
-from serializers import PlantaSerializer 
+from rest_framework import viewset
 from floricultura.models import Planta, Vaso
+from serializer import PlantaSerializer, VasoSerializer
 
 
-@decorators.api_view (['GET',])
-def planta (request):
-    planta = Planta.objects.all ()
-    serializers = PlantaSerializer (planta, many=True)
-    return Response (serializers.data)
 
+class PlantaViewSet (viewset.ModelViewSet):
+    queryset = Planta.objects.all ()
+    serializer_class = PlantaSerializer (planta, many=True)
+
+class VasoViewSet (viewset.ModelViewSet):
+    queryset = Vaso.objects.all ()
+    serializer_class = VasoSerializer (vaso, many=True)
 
 # Create your views here.
