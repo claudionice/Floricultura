@@ -1,15 +1,15 @@
-from rest_framework import viewset
+from rest_framework import viewsets
 from floricultura.models import Planta, Vaso
-from serializer import PlantaSerializer, VasoSerializer
+from floricultura.serializers import PlantaSerializers, VasoSerializers
 
 
 
-class PlantaViewSet (viewset.ModelViewSet):
+class PlantaViewSets (viewsets.ModelViewSet):
     queryset = Planta.objects.all ()
     serializer_class = PlantaSerializer (planta, many=True)
 
-class VasoViewSet (viewset.ModelViewSet):
+class VasoViewSets (viewsets.ModelViewSet):
     queryset = Vaso.objects.all ()
-    serializer_class = VasoSerializer (vaso, many=True)
+    serializers_class = VasoSerializers (vaso, many=True)
 
 # Create your views here.
