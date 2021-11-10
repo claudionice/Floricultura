@@ -4,10 +4,10 @@ from floricultura.serializers import PlantaSerializers, VasoSerializers
 
 class PlantaViewSets (viewsets.ModelViewSet):
     queryset = Planta.objects.all ()
-    serializers_class = PlantaSerializers (PlantaSerializers, many=True)
+    serializers_class = PlantaSerializers 
 
 class VasoViewSets (viewsets.ModelViewSet):
     queryset = Vaso.objects.all ()
-    serializers_class = VasoSerializers (VasoSerializers, many=True)
+    serializers_class = VasoSerializers 
 
 # Create your views here.
