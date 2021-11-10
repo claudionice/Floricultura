@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from floricultura.views import PlantaViewSets, VasoViewSets 
-from rest_framework import router
+from rest_framework import routers
 
 router = routers.DefaultRouter ()
 router.register ('Planta', PlantaViewSets, basename= 'Planta')
